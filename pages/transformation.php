@@ -1,6 +1,7 @@
 <?php 
 $titre = "Les transformations en CSS";
 $pageStyle = "transformation.css";
+$pageScript = "transformation.js";
 ?>
 
 <?php ob_start() ?>
@@ -30,21 +31,5 @@ $pageStyle = "transformation.css";
     <div class="zoom"></div>
 
 </section>
-<script>
-    
-function getId(id) {
-    return(document.getElementById(id))
-}
-    
-function apparition(){
-    getId('codesource').classList.add("codecible")
-    getId('bouton').classList.add("test2")
-}
-    
-function disparition(){
-    getId('codesource').classList.remove("codecible")
-    getId('bouton').classList.remove("test2")
-}
-</script>
 
 <?php $content = ob_get_clean() ?>

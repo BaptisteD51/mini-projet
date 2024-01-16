@@ -19,6 +19,9 @@
     echo "<main>" . $content . "</main>";
     include "parts/bas.php";
     ?>
+    <?php if(isset($pageScript)):?>
+    <script src="js/<?= $pageScript; ?>"></script>
+    <?php endif;?>
 </body>
 
 </html>

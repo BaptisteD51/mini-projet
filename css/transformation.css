@@ -1,0 +1,105 @@
+body.transformation .batiment{
+    text-align: center;
+    display: block;
+    border: red solid 1px;
+    background-image: url(../Images/batiment_bauhaus.jpg);
+    background-size: cover;
+    height: 95px;
+    width: 75px;
+
+}
+
+body.transformation .fondBat{
+    background-image: url(../Images/fondBat.jpeg);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 50%; 
+}
+
+
+body.transformation #transformation{
+    display: none;
+}
+
+body.transformation #retour{
+    display: none;
+}
+
+
+body.transformation #transformation:target + p{
+    
+    transform: translate(500px) rotate(20deg);
+    transform-origin: 0 -350px;
+    transition-property: all;
+    transition-duration: 5s;
+    opacity: 0;
+}
+
+body.transformation #retour:target + div p + p + p{
+    transform: translate(0px) rotate(0deg);
+    transform-origin: 0 -350px;
+    transition-property: transform;
+    transition-duration: 5s;
+    opacity: 1;
+}
+
+body.transformation div{
+    display: grid;
+    grid-template-rows: auto ;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10px;
+    border: 1px solid black;
+    background-color: rgba(0, 0, 0, 0.37);
+    margin: 0 50px 0 50px;
+    color: white;
+    padding: 10px;
+}
+
+body.transformation .premier{
+    border-right: solid black;
+}
+
+body.transformation .deuxieme{
+    border-left: solid black;
+}
+
+body.transformation div.deuxieme{
+    margin: 50px;
+    height: 250px;
+}
+
+body.transformation p img{
+    height: 200px;
+    width: 350px;
+    opacity: 0;
+    transform: scale(0);
+    transition-property: all;
+    transition-duration: 2s;
+}
+
+body.transformation .codecible{
+
+    opacity: 1;
+    transform: scale(100%);
+    transition-property: all;
+    transition-duration: 2s;
+}
+
+body.transformation .test2{
+    opacity: 0;
+    transition-property: opacity;
+}
+
+body.transformation section{
+    margin: auto;
+    overflow: hidden;
+    width: 696px;
+    height: 340px;
+}
+
+body.transformation .zoom:hover{
+    transform: scale(150%);
+    transition-property: transform;
+    transition-duration: 2s;
+    
+}

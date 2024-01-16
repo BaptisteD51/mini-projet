@@ -1,0 +1,42 @@
+body.animation div.dots{
+    margin:auto;
+    height:100px;
+    width:250px;
+    border:solid 1px;
+    background-color: aliceblue;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    gap:20px;
+}
+
+body.animation div.dots > div{
+    width:20px;
+    height:20px;
+    background-color: black;
+    border-radius: 50%;    
+}
+
+@keyframes dotmove{
+    0% {
+        transform: translateY(0px);
+    }
+    66% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(-20px);
+    }
+}
+
+body.animation div.dots > div:first-of-type{
+    animation: dotmove 1s ease-in-out alternate infinite;
+}
+
+body.animation div.dots > div:nth-of-type(2){
+    animation: dotmove 1s ease-in-out 0.33s alternate infinite;
+}
+
+body.animation div.dots > div:last-of-type{
+    animation: dotmove 1s ease-in-out 0.66s alternate infinite;
+}

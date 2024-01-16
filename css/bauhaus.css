@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
+@import url('custom-classes.css');
+
+body{
+    background-color: #ECDDBE ;
+    background-size: cover;
+    margin: 0px;
+    padding: 0px;
+    font-family: Raleway;
+  }  
+
+main{
+    max-width: 900px;
+    margin:auto;
+}
+
+
+header p.site-title{
+    display: flex;
+    margin-top: 0px;
+    padding-top: 20px;
+    color: white;
+    font-weight: bold;
+    background-image: url(../Images/bauhaus-gauche.svg), url(../Images/bauhaus-droite.svg);
+    background-position: left, right;
+    background-repeat: no-repeat;
+    background-color: #C43026;
+    height: 219px;
+    justify-content: center;
+    align-items: center;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+p{
+    text-align: justify;
+}
+
+h1{
+    text-align: center;
+}
+
+@media only screen and (max-width: 775px) {
+  header p.site-title{
+    background-image: url(../Images/bauhaus-gauche.svg);
+  }
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    background-color: #E3C000;
+    text-align: center;
+    width: 900px;
+    margin: auto;
+}
+        
+footer nav{
+    display: flex;
+    justify-content: center;
+    text-decoration: none;    
+}
+
+nav a{
+    
+    border: 1px solid #0465B9;
+    padding: 5px;
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    background-color: #0465B9;
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+    font-weight: bold;
+            
+}
+
+pre{
+    display: inline-block;
+    background-color: white;
+    padding-right: 25px;
+}

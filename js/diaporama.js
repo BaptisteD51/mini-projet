@@ -1,17 +1,26 @@
 var slides = document.querySelectorAll("div.slide");
 
-function changeOrder(elmt){
-    var order = parseInt(elmt.style.order);
-    if(order == 2){
-        order = 0;
+function slideIn(elmt){
+    var position = parseInt(elmt.dataset.position);
+    if( position==2 ){
+        position = 0
+        elmt.dataset.position = position
+        elmt.style.zIndex = "0";
     }else{
-        order++
+        position++
+        elmt.dataset.position = position
+        elmt.style.zIndex = "1";
     }
-    elmt.style.order = order
+    elmt.style.left = (position * 900) + "px" 
 }
+
+slides.forEach(function(slide){
+    slideIn(slide)
+})
+
 
 setInterval(function(){
     slides.forEach(function(slide){
-        changeOrder(slide)
+        slideIn(slide);
     })
-},5000)
+},4000)

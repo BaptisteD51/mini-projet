@@ -1,4 +1,4 @@
-body.animation div.dots{
+div.dots{
     margin:auto;
     height:100px;
     width:250px;
@@ -10,7 +10,7 @@ body.animation div.dots{
     gap:20px;
 }
 
-body.animation div.dots > div{
+div.dots > div{
     width:20px;
     height:20px;
     background-color: black;
@@ -29,14 +29,14 @@ body.animation div.dots > div{
     }
 }
 
-body.animation div.dots > div:first-of-type{
+div.dots > div:first-of-type{
     animation: dotmove 1s ease-in-out alternate infinite;
 }
 
-body.animation div.dots > div:nth-of-type(2){
+div.dots > div:nth-of-type(2){
     animation: dotmove 1s ease-in-out 0.33s alternate infinite;
 }
 
-body.animation div.dots > div:last-of-type{
+div.dots > div:last-of-type{
     animation: dotmove 1s ease-in-out 0.66s alternate infinite;
 }

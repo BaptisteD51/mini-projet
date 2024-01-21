@@ -1,10 +1,14 @@
 <?php 
-$titre = "Site de Baptiste et Estévène : Accueil "
+$titre = "Site de Baptiste et Estévène : Accueil ";
+$pageStyle = "diaporama.css";
+$pageScript = "diaporama.js";
 ?>
 
 <?php ob_start() ?>
 
 <h1>Accueil</h1>
+
+<?php include "parts/diaporama.php"; ?>
 
 <div>
 <p>Bienvenue sur la page d'accueil de notre site WEB</p>

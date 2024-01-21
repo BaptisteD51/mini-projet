@@ -1,4 +1,4 @@
-body.transformation .batiment{
+.batiment{
     text-align: center;
     display: block;
     border: red solid 1px;
@@ -9,24 +9,22 @@ body.transformation .batiment{
 
 }
 
-body.transformation .fondBat{
+.fondBat{
     background-image: url(../Images/fondBat.jpeg);
     background-repeat: no-repeat;
     background-position: right;
     background-size: 50%; 
 }
 
-
-body.transformation #transformation{
+#transformation{
     display: none;
 }
 
-body.transformation #retour{
+#retour{
     display: none;
 }
 
-
-body.transformation #transformation:target + p{
+#transformation:target + p{
     
     transform: translate(500px) rotate(20deg);
     transform-origin: 0 -350px;
@@ -35,7 +33,7 @@ body.transformation #transformation:target + p{
     opacity: 0;
 }
 
-body.transformation #retour:target + div p + p + p{
+#retour:target + div p + p + p{
     transform: translate(0px) rotate(0deg);
     transform-origin: 0 -350px;
     transition-property: transform;
@@ -43,7 +41,7 @@ body.transformation #retour:target + div p + p + p{
     opacity: 1;
 }
 
-body.transformation div{
+div{
     display: grid;
     grid-template-rows: auto ;
     grid-template-columns: 1fr 1fr;
@@ -55,20 +53,20 @@ body.transformation div{
     padding: 10px;
 }
 
-body.transformation .premier{
+.premier{
     border-right: solid black;
 }
 
-body.transformation .deuxieme{
+.deuxieme{
     border-left: solid black;
 }
 
-body.transformation div.deuxieme{
+div.deuxieme{
     margin: 50px;
     height: 250px;
 }
 
-body.transformation p img{
+p img{
     height: 200px;
     width: 350px;
     opacity: 0;
@@ -77,7 +75,7 @@ body.transformation p img{
     transition-duration: 2s;
 }
 
-body.transformation .codecible{
+.codecible{
 
     opacity: 1;
     transform: scale(100%);
@@ -85,19 +83,19 @@ body.transformation .codecible{
     transition-duration: 2s;
 }
 
-body.transformation .test2{
+.test2{
     opacity: 0;
     transition-property: opacity;
 }
 
-body.transformation section{
+section{
     margin: auto;
     overflow: hidden;
     width: 696px;
     height: 340px;
 }
 
-body.transformation .zoom:hover{
+.zoom:hover{
     transform: scale(150%);
     transition-property: transform;
     transition-duration: 2s;

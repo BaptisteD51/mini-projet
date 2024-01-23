@@ -1,16 +1,15 @@
 .batiment{
     text-align: center;
     display: block;
-    border: red solid 1px;
-    background-image: url(../Images/batiment_bauhaus.jpg);
+    background-image: url(../Images/batiment-bauhaus.png);
     background-size: cover;
-    height: 95px;
-    width: 75px;
+    height: 210px;
+    width: 185px;
 
 }
 
 .fondBat{
-    background-image: url(../Images/fondBat.jpeg);
+    background-image: url(../Images/font-bat.svg);
     background-repeat: no-repeat;
     background-position: right;
     background-size: 50%; 

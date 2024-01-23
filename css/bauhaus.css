@@ -113,3 +113,8 @@ div.zoom{
     transition-property: transform;
     transition-duration: 2s;
 }
+
+h2.accueil{
+    background-color: #0465B9;
+    
+}

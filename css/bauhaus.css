@@ -101,6 +101,14 @@ pre{
     width: 185px;
 
 }
+div.fondBat,
+div.deuxieme {
+    border: 1px solid black;
+    background-color: rgba(0, 0, 0, 0.37);
+    margin: 0 50px 0 50px;
+    color: white;
+    padding: 10px;
+}
 
 div.zoom{
     background-image: url(../Images/oeuvre.png);
@@ -112,4 +120,22 @@ div.zoom{
     width: 100%;
     transition-property: transform;
     transition-duration: 2s;
+}
+
+h2.accueil{
+    background-color: #E3C000;
+    color: white;
+    padding: 5px;
+    
+}
+
+div.bauhauskesako, div.psychekesako{
+    border: 2px solid #0465B9;
+    padding: 5px;
+}
+
+h3{
+    background-color: #c42f26;
+    color: white;
+    padding: 0 5px 0 5px;
 }

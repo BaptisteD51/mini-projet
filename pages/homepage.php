@@ -18,7 +18,7 @@ $pageScript = "diaporama.js";
 
 <h2 class="accueil">Le Bahaus, quésako?</h2>
 
-<div class="bauhaiskesako">
+<div class="bauhauskesako">
     <p>Ce mouvement fut très court, pourtant, il a aujourd'hui encore une très grande influence sur notre quotidien.</p>
     <p>Mais alors, le Bauhaus, qu'est que c'est? Vous imaginez peut-être les batiments construits en béton, très sobre et très présents en Europe de l'Est. Mais en réalité c'est bien plus que ça!</p>
 
@@ -37,7 +37,7 @@ $pageScript = "diaporama.js";
 </div>
 
 <h2 class="accueil">Le mouvement psychédélique, quésako?</h2>
-<div class="psychékesako">
+<div class="psychekesako">
     <p>Vous connaissez certainement le muouvement hippie non? Et bien disons que le psychédélique en est un enfant. Très influencé par la musique rock, le mouvement hippie essaie de s'émanciper des valeurs traditionnelles américaines.</p>
     <p>Ils essaient de s'ouvrir à de nouvelles cultures, comme la culture amérandienne et s'efforce à construire un mode de vie alternatif.</p>
     <p>Leur style est très coloré et décalé, caractéristiques que nous retrouvons dans le psychédélisme.</p>

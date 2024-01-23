@@ -6,7 +6,6 @@ body{
     background-position: bottom;
     background-repeat: no-repeat;
     background-size: 1000px 1000px;
-    height: 1000px;
     font-family: glass antiqua;
     display: grid;
     grid-template-rows: auto;
@@ -88,12 +87,25 @@ header{
     padding: 5px;
 }
 
+h2.accueil{
+    background-color: yellow;
+    color: black;
+    border-radius: 20px;
+}
 
+div{
+    display: block;
+    border: 1px solid black;
+    background-color: rgba(0, 0, 0, 0.37);
+    margin: 0 50px 0 50px;
+    color: white;
+    padding: 10px;
+}
 
 .batiment{
     text-align: center;
     display: block;
-    background-image: url(../Images/clavier.png);
+    background-image: url(../Images/tournesol.png);
     background-size: cover;
     height: 150px;
     width: 100px;
@@ -149,6 +161,23 @@ div:not(.zoom){
     border-radius: 20px;
 }
 
+div.zoom{
+    background-image: url(../Images/dali.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100%;
+    width: 100%;
+    transition-property: transform;
+    transition-duration: 2s;
+}
+
+.zoom:hover{
+    transform: scale(200%);
+    transition-property: transform;
+    transition-duration: 2s;
+    
+}
+
 .premier{
     border-right: solid black;
 }
@@ -191,22 +220,7 @@ section{
     height: 175px;
 }
 
-div.zoom{
-    background-image: url(../Images/dali.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    height: 100%;
-    width: 100%;
-    transition-property: transform;
-    transition-duration: 2s;
-}
 
-.zoom:hover{
-    transform: scale(200%);
-    transition-property: transform;
-    transition-duration: 2s;
-    
-}
 
 @media only screen and (max-width: 1020px) {
   

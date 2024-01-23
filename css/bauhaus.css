@@ -3,7 +3,6 @@
 
 body{
     background-color: #ECDDBE;
-    
     background-size: cover;
     margin: 0px;
     padding: 0px;
@@ -84,4 +83,33 @@ pre{
     display: inline-block;
     background-color: white;
     padding-right: 25px;
+}
+
+.fondBat{
+    background-image: url(../Images/font-bat.svg);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 50%; 
+}
+
+.batiment{
+    text-align: center;
+    display: block;
+    background-image: url(../Images/batiment-bauhaus.png);
+    background-size: cover;
+    height: 210px;
+    width: 185px;
+
+}
+
+div.zoom{
+    background-image: url(../Images/oeuvre.png);
+    background-color: rgba(255, 255, 255, 0);
+    border: 0px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100%;
+    width: 100%;
+    transition-property: transform;
+    transition-duration: 2s;
 }

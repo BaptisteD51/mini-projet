@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Glass+Antiqua&display=swap');
-@import url('custom-classes.css');
+@import url('general.css');
 
 body{
     background-image: url(../Images/collage.svg);

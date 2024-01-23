@@ -87,16 +87,26 @@ $pageStyle = "animations.css";
     <li> <strong>dotmove : </strong>facile, il s'agit du keyframe que nous avons précédemment défini </li>
     <li> 
         <strong>1s :</strong> correspond à la proprété long-hand animation-duration.
-        C'est la seule valeur vraiment obligatoire pour que l'animation fonctionne. 
+        C'est la seule valeur vraiment <span class="bold">obligatoire</span> pour que l'animation fonctionne.
+        L'animation mettra une seconde à s'effectuer
     </li>
     <li>
         <strong>ease-in-out :</strong> correspond à animation-timing-function. Ce qui en terme moins barbare,
-        défini la manière dont l'animation va progresser entre chaue étape. Ease-in-out permet de donner un petit
-        effet d'amorti. Mais il y a d'autres possibilités, linear, par exemple, si on ne veut pas d'effet
-        d'accélération et de décélération.
+        défini la manière dont l'animation va progresser entre chaque étape. Ease-in-out permet de donner un petit
+        <span class="bold">effet d'amorti</span>. Mais il y a d'autres possibilités, linear, par exemple, si on ne veut pas d'effet
+        <span class="bold">d'accélération</span> et de <span class="bold">décélération</span>.
     </li>
     <li>
-        
+        <strong>alternate :</strong> correspond à animation-direction. La propriété alternate permet de
+        faire en sorte que l'animation se joue dans les deux sens. En clair, une fois 
+        arrivée à 100%, l'animation va s'effectuer en sens inverse pour revenir à son point de 
+        départ, ici 0%.
+    </li>
+    <li>
+        <strong>infinite :</strong> C'est l'astuce de la présente animation. Comme son nom 
+        l'indique, cette propriété qui correspond au short-hand animation-iteration-count,
+        permet de faire en sorte que l'animation <strong>se joue à l'infini</strong>. Il est également possible
+        de spécifier un <span class="bold">nombre de fois</span> défini. 
     </li>
 </ul>
 

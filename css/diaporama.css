@@ -3,16 +3,13 @@ main{
 }
 
 div.carrousel{
-    width:2700px;
     position:relative;
-    left:-900px;
     height:500px;
 }
 
 div.slide{
     position:absolute;
     top:0px;
-    width: 900px;
     min-height:500px;
     border:1px solid;
     background-repeat: no-repeat;

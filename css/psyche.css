@@ -33,13 +33,14 @@ nav {
     color: yellow;
     height: 500px;
     border-radius: 20px;
-    border: solid black 1px;
+    border: solid #ff3f3f 1px;
     background-color: white;
 }
         
 
 footer nav{
     background-color: yellow;
+    border: 0;
 }
 
 nav a{
@@ -47,7 +48,8 @@ nav a{
     width: 100px;
     height: 30px;
     text-align: center;
-    color: black;
+    color: white;
+    background-color: #ff3f3f;
     text-decoration: none;
     margin: 10px;
             
@@ -59,8 +61,7 @@ nav header{
 }
 
 a{
-    border: 1px black solid;
-    background-color: white;
+    background-color: yellow;
     color: black;
     padding: 5px;
     text-decoration: none;
@@ -82,6 +83,10 @@ footer nav{
     text-decoration: none;    
 }
 
+footer nav a{
+    background-color: white;
+    color: black;
+}
 
 header{
     padding: 5px;
@@ -95,7 +100,6 @@ h2.accueil{
 
 div{
     display: block;
-    border: 1px solid black;
     background-color: rgba(0, 0, 0, 0.37);
     margin: 0 50px 0 50px;
     color: white;
@@ -149,7 +153,6 @@ p#retour{
 }
 
 div:not(.zoom){
-    border: 1px solid black;
     background-color: rgba(1, 84, 174, 0.87);
     margin: 0 50px 0 50px;
     color: white;
@@ -160,6 +163,7 @@ div:not(.zoom){
 div.zoom{
     background-image: url(../Images/dali.png);
     background-repeat: no-repeat;
+    background-color: transparent;
     background-size: contain;
     height: 100%;
     width: 100%;

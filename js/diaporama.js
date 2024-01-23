@@ -20,7 +20,7 @@ function slideIn(elmt){
         elmt.dataset.position = position
         elmt.style.zIndex = "1"
     }
-    elmt.style.left = (position * 900) + "px" 
+    elmt.style.left = (position * mainWidth) + "px" 
 }
 
 slides.forEach(function(slide){

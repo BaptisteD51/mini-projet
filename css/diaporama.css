@@ -3,11 +3,21 @@ main{
 }
 
 div.carrousel{
+    margin:0px!important;
+    padding:0px!important;
+    border: none!important;
+    border-radius: 0px!important;
+
     position:relative;
     height:500px;
 }
 
 div.slide{
+    margin:0px!important;
+    padding:0px!important;
+    border-radius: 0px!important;
+    border: none!important;
+
     position:absolute;
     top:0px;
     min-height:500px;

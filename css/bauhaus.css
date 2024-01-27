@@ -46,7 +46,7 @@ h1{
 }
 
 @media only screen and (max-width: 775px) {
-  header p.site-title{
+  header div.site-info{
     background-image: url(../Images/bauhaus-gauche.svg);
   }
 }

@@ -2,6 +2,10 @@ body{
     overflow-x: hidden;
 }
 
+main *:not(div.carrousel){
+    padding:0px 10px;
+}
+
 .bold{
     font-weight:bold;
 }
@@ -16,4 +20,9 @@ body{
 
 .color-blue{
     color:blue;
+}
+
+pre{
+    max-width: 100%;
+    overflow: scroll;
 }

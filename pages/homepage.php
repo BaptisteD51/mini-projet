@@ -1,5 +1,5 @@
 <?php 
-$titre = "Site de Baptiste et Estévène : Accueil ";
+$titre = "Accueil ";
 $pageStyle = "diaporama.css";
 $pageScript = "diaporama.js";
 ?>

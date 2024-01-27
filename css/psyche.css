@@ -98,12 +98,16 @@ h2.accueil{
     border-radius: 20px;
 }
 
-div{
-    display: block;
+div.site-info{
+    display: flex;
+    flex-direction: column;
     background-color: rgba(0, 0, 0, 0.37);
-    margin: 0 50px 0 50px;
     color: white;
     padding: 10px;
+}
+
+.site-logo img{
+    max-width:100%;
 }
 
 .batiment{
@@ -152,7 +156,7 @@ p#retour{
     opacity: 1;
 }
 
-div:not(.zoom){
+main div:not(.zoom){
     background-color: rgba(1, 84, 174, 0.87);
     margin: 0 50px 0 50px;
     color: white;
@@ -188,15 +192,6 @@ div.zoom{
 
 div.deuxieme{
     margin: 50px;
-}
-
-p img{
-    height: 200px;
-    width: 350px;
-    opacity: 0;
-    transform: scale(0);
-    transition-property: all;
-    transition-duration: 2s;
 }
 
 .codecible{

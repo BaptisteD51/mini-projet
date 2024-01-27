@@ -17,7 +17,9 @@ $menu = [
 ?>
 
 <header>
-    <p class="site-title">Site de Baptiste et Esté: <?php echo $titre; ?></p>
-    <p class="site-logo"><img src="Images/logo-couleur.svg"></p>
+    <div class="site-info">
+        <p class="site-logo"><img src="Images/logo-couleur.svg"></p>
+        <p class="site-title">Site de Baptiste et Esté : <?php echo $titre; ?></p>
+    </div>
     <?php echoPages($menu, $url, $css); ?>
 </header>

@@ -15,19 +15,22 @@ main{
 }
 
 
-header p.site-title{
+header div.site-info{
     display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+
     margin-top: 0px;
     padding-top: 20px;
+    height: 219px;
+
     color: white;
     font-weight: bold;
     background-image: url(../Images/bauhaus-gauche.svg), url(../Images/bauhaus-droite.svg);
     background-position: left, right;
     background-repeat: no-repeat;
     background-color: #C43026;
-    height: 219px;
-    justify-content: center;
-    align-items: center;
 }
 
 *{

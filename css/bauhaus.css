@@ -54,10 +54,14 @@ h1{
 header nav {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+
     text-decoration: none;
     background-color: #E3C000;
     text-align: center;
+    
     width: 900px;
+    max-width:100%;
     margin: auto;
 }
         

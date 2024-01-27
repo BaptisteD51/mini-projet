@@ -16,6 +16,7 @@ body{
 main{
     grid-row: 1;
     grid-column: 2;
+    background-color: rgba(255,255,255,0.8);
 }
 
 *{
@@ -25,16 +26,20 @@ main{
 
 
 nav {
-    padding-top: 70px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    flex-wrap: wrap;
+
     text-decoration: none;
     color: yellow;
+    background-color: white;
+
+    padding-top: 70px;
     height: 500px;
     border-radius: 20px;
     border: solid #ff3f3f 1px;
-    background-color: white;
+    
 }
         
 
@@ -219,24 +224,21 @@ section{
 
 @media only screen and (max-width: 1020px) {
   
-nav {
-    height: 50px;
-    display: flex;
-    flex-direction: row;
-    padding-top: 0;
+    nav {
+        height: unset;
+        flex-direction: row;
+        padding-top: 0;
 
-}
-    
-   body {
+    }
+        
+    body {
+        display: block; 
+    }
 
-       display: block; 
-
-   }
-    
     footer nav{
         margin: 20px;
     } 
-    
+
 }
 
 @media only screen and (max-width: 600px) {

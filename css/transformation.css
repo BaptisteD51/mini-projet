@@ -1,13 +1,12 @@
-
-#transformation{
+main #transformation{
     display: none;
 }
 
-#retour{
+main #retour{
     display: none;
 }
 
-#transformation:target + p{
+main #transformation:target + p{
     
     transform: translate(500px) rotate(20deg);
     transform-origin: 0 -350px;
@@ -16,7 +15,7 @@
     opacity: 0;
 }
 
-#retour:target + div p + p + p{
+main #retour:target + div p + p + p{
     transform: translate(0px) rotate(0deg);
     transform-origin: 0 -350px;
     transition-property: transform;
@@ -24,27 +23,27 @@
     opacity: 1;
 }
 
-div.fondBat, div.deuxieme{
+main div.fondBat, div.deuxieme{
     display: grid;
     grid-template-rows: auto ;
     grid-template-columns: 1fr 1fr;
     column-gap: 10px;
 }
 
-.premier{
+main .premier{
     border-right: solid black;
 }
 
-.deuxieme{
+main .deuxieme{
     border-left: solid black;
 }
 
-div.deuxieme{
+main div.deuxieme{
     margin: 50px;
     height: 250px;
 }
 
-p img{
+main p img{
     height: 200px;
     width: 350px;
     opacity: 0;
@@ -53,7 +52,7 @@ p img{
     transition-duration: 2s;
 }
 
-.codecible{
+main .codecible{
 
     opacity: 1;
     transform: scale(100%);
@@ -61,22 +60,21 @@ p img{
     transition-duration: 2s;
 }
 
-.test2{
+main .test2{
     opacity: 0;
     transition-property: opacity;
 }
 
-section{
+main section{
     margin: auto;
     overflow: hidden;
     width: 696px;
     height: 340px;
 }
 
-.zoom:hover{
+main .zoom:hover{
     transform: scale(150%);
     transition-property: transform;
     transition-duration: 2s;
     
 }
-

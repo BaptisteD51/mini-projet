@@ -1,7 +1,7 @@
-<!-- Bonjour -->
 <?php
 $titre = "Les animations en CSS";
 $pageStyle = "animations.css";
+$pageScript = "animations.js";
 ?>
 
 <?php ob_start() ?>
@@ -109,5 +109,188 @@ $pageStyle = "animations.css";
         de spécifier un <span class="bold">nombre de fois</span> défini. 
     </li>
 </ul>
+
+<h2> Les animations déclenchées en Javascript </h2>
+<p>
+    Alors voilà, pour ce genre d'animation qui se joue en boucle, faire uniquement du css se révèle suffisant
+    Mais vous remarquerez vite que les animations se déclenchent au chargement du DOM. C'est pas super pratique
+    si vous voulez jouer une animation ponctuelle au milieu de la page par exemple. Avec du CSS 
+    uniquement, l'animation ce sera déclenchée bien avant que l'utilisateur puisse la voire. 
+</p>
+<p> 
+    Pour résoudre ce problème, nous allons devoir utiliser du javascript, qui pourra appliquer les 
+    règles css en fonction des événements sur la page. Ainsi il est tout à fait possible de jouer une 
+    animation en cliquant sur un bouton par exemple.
+</p>
+<p> 
+    Mais pour quelque chose de plus immerssif, je vous propose de découvrir l'<strong>IntersectionOberver</strong>
+    en javascript. Il va nous permettre de déclencher nos animations quand elles seront visibles par 
+    l'utilisateur.
+</p>
+<div class='cadre-gibbon'>
+    <div class="branche-gibbon">
+        <img src="Images/gibbon-animation.png" alt="Gibbon sur liane">
+    </div>
+</div>
+<p> Voici le KeyFrame que j'ai utilisé, vous devriez avoir l'habitude maintenant :</p>
+<pre>
+    <code>
+        @keyframes <span class="color-red">gibbon-move</span>{
+            <span class="color-blue">0%</span>{
+                transform: rotateZ(90deg);
+            }
+            <span class="color-blue">36%</span>{
+                transform: rotateZ(-90deg);
+            }
+            <span class="color-blue">40%</span>{
+                transform: rotateZ(-90deg) rotateY(180deg);
+            }
+            <span class="color-blue">76%</span>{
+                transform: rotateZ(90deg) rotateY(180deg);
+            }
+            <span class="color-blue">80%</span>{
+                transform: rotateZ(90deg) rotateY(0deg);
+            }
+            <span class="color-blue">100%</span>{
+                transform: rotateZ(0deg);
+            }
+        }
+    </code>
+</pre>
+<p>
+    Cependant, je n'ai pas envie que cette animation démarre avec le chargement du DOM, c'est pourquoi elle 
+    ne sera appelée uniquement quand une class "play-animation" sera ajoutée.
+</p>
+<pre>
+    <code>
+        <span class="color-green bold">.play-animation</span> .branche-gibbon{
+            visibility: visible;
+            <span class="color-blue">animation:</span> <span class="color-red">gibbon-move</span> 5s;
+        }
+    </code>
+</pre>
+<p>
+    On l'ajoutera au div parent, celui avec la jungle en background-image, avec du javascript. 
+</p>
+<p>
+    Pour cela nous avons besoin de l'objet javascript <strong>IntersectionOberver</strong>,
+    commençons dejà par l'instancier dans notre script : 
+</p>
+<pre>
+    <code>
+        var <span class="color-red">observer</span> = new <span class="color-green">IntersectionObserver</span>(function(<span class="color-blue">entries</span>){
+            <span class="color-gray">/* Une fonction de callback */</span>
+        },{ <span class="color-gray">/* Des options */</span> })
+    </code>
+</pre>
+<p>
+    Maintenant, il s'agirai d'observer un élement de notre DOM. Il faut utiliser la méthode "<strong>observe</strong>"
+    de notre IntersectionObserver. On va choisir d'observer le cadre qui contient notre 
+    magnifique gibbon : 
+</p>
+<pre>
+    <code>
+        var cadre = document.querySelector(".cadre-gibbon")
+
+        <span class="color-red">observer</span>.<span class="span color-blue">observe</span>(cadre)
+    </code>
+</pre>
+<p> 
+    Nous allons ajouter un peu de code dans le callback de notre observer. Afin de comprendre un peu 
+    mieux ce qu'il se passe :
+</p>
+<pre>
+    <code>
+        var <span class="color-red">observer</span> = new <span class="color-green">IntersectionObserver</span>(function(<span class="color-blue">entries</span>){
+            <span class="color-blue">entries</span>.forEach(function(<span class="color-cyan">entry</span>){
+                if(<span class="color-cyan">entry</span>.isIntersecting){
+                    var <span class="color-orange">elmt</span> = <span class="color-cyan">entry</span>.target
+                    console.log(<span class="color-orange">elmt</span>)
+                }
+            })
+        },{
+            <span class="color-gray">/* Des options */</span>
+        })
+    </code>
+</pre>
+<p> Procédons étapes par étapes : </p>
+<ul>
+    <li> 
+        Les entries, ce sont les événements que l'on observe avec la méthode observe. Je parle bien d'événements, 
+        pas d'elements du DOM. Dans notre cas présent, nous n'avons qu'une entrée. Pour parler français,
+        nous observons l'événement d'intersection entre le cadre qui contient le gibbon et la partie visible
+        de l'écran.
+    </li>
+    <li> 
+        forEach permet de boucler sur toutes les entrées. En l'occurence, nous n'en avons qu'une, mais 
+        nous pourrions en rajouter
+    </li>
+    <li>
+        La propriété isIntersecting d'une entry permet de savoir quand l'élément du DOM est dans la 
+        partie visible de l'écran. Lorsque c'est le cas, on veut déclancher un petit script 
+    </li>
+    <li> 
+        Comme on travaille sur un événement, on a besoin de la propriété target pour cibler l'élément
+        du DOM auquel il se rapporte. Ensuite on affiche l'élément dans la console. 
+    </li>
+    <li> 
+        Dorénavant, à chaque fois que vous le cadre entrera dans le domaine visible de la fenêtre,
+        il y aura une entrée dans la console.
+    </li>
+</ul>
+<p> 
+    Une fois cela à peu prêt compris, on peu rajouter quelques lignes de code pour déclencher notre 
+    animation.
+</p>
+<pre>
+    <code>
+        var <span class="color-red">observer</span> = new <span class="color-green">IntersectionObserver</span>(function(<span class="color-blue">entries</span>){
+            <span class="color-blue">entries</span>.forEach(function(<span class="color-cyan">entry</span>){
+                if(<span class="color-cyan">entry</span>.isIntersecting){
+                    var <span class="color-orange">elmt</span> = <span class="color-cyan">entry</span>.target
+                    <span class="color-orange">elmt</span>.classList.add("<span class="color-green bold">play-animation</span>")
+                    <span class="color-red">observer</span>.<span class="span color-blue">unobserve</span>(<span class="color-orange">elmt</span>)
+                }
+            })
+        },{
+            <span class="color-gray">/* Des options */</span>
+        })
+    </code>
+</pre>
+<p>
+    Ainsi, le gibbon prendre son envol gracieux dès que le cadre sera visible. Un fois cela accomplie, plus besoin d'observer notre cadre,
+    d'ou la méthode unobserve. 
+</p>
+<p> 
+    Dernier détail : vous aurez certainement remarqué que votre animation se joue dès qu'un pixel du cadre entre dans la zone 
+    d'affichage. Ca peut-être embêtant, car votre utilisateur va manquer le début de l'animation, voir totalement passer à côté.
+    Heureusement, vous pouvez ajouter des options pour remédier à ce problème à votre IntersectionOberver. 
+</p>
+<pre>
+    <code>
+        var <span class="color-red">observer</span> = new <span class="color-green">IntersectionObserver</span>(function(<span class="color-blue">entries</span>){
+            <span class="color-blue">entries</span>.forEach(function(<span class="color-cyan">entry</span>){
+                if(<span class="color-cyan">entry</span>.isIntersecting){
+                    var <span class="color-orange">elmt</span> = <span class="color-cyan">entry</span>.target
+                    <span class="color-orange">elmt</span>.classList.add("<span class="color-green bold">play-animation</span>")
+                    <span class="color-red">observer</span>.<span class="span color-blue">unobserve</span>(<span class="color-orange">elmt</span>)
+                }
+            })
+        },{
+            <span class="color-blue">threshold:</span><span class="color-orange">0.8</span>
+        })
+    </code>
+</pre>
+<p>
+    L'option threshold est particulièrement pratique. 
+    Elle permet de définir à partit de quel pourcentage de l'élément visible dans le viewport l'élément sera considéré comme 
+    "isIntersecting". En l'espèce, mon gibbon démarera ses acrobaties une fois 80% du cadre visible.
+</p>
+<h2>Conclusion</h2>
+<p>
+    Ca y est, vous avez les bases pour créer et déclencher des animations stylées. N'hésitez pas à en ajouter sur vos sites webs
+    pour les rendre plus vivants. N'hésitez pas à consulter la documentation disponible en ligne pour avoir plus de précision
+    sur les propriétés CSS que je n'ai pas abordées !
+</p> 
 
 <?php $content = ob_get_clean() ?>

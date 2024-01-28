@@ -40,3 +40,48 @@ div.dots > div:nth-of-type(2){
 div.dots > div:last-of-type{
     animation: dotmove 1s ease-in-out 0.66s alternate infinite;
 }
+
+.cadre-gibbon{
+    background: url(../Images/jungle.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    min-height:500px;
+}
+
+.branche-gibbon{
+    width:200px;
+    margin:auto;
+    transform-origin: top center;
+    visibility: hidden;
+}
+
+.play-animation .branche-gibbon{
+    visibility: visible;
+    animation: gibbon-move 5s;
+}
+
+.branche-gibbon img{
+    width:100%;
+}
+
+@keyframes gibbon-move{
+    0%{
+        transform: rotateZ(90deg);
+    }
+    36%{
+        transform: rotateZ(-90deg);
+    }
+    40%{
+        transform: rotateZ(-90deg) rotateY(180deg);
+    }
+    76%{
+        transform: rotateZ(90deg) rotateY(180deg);
+    }
+    80%{
+        transform: rotateZ(90deg) rotateY(0deg);
+    }
+    100%{
+        transform: rotateZ(0deg);
+    }
+}

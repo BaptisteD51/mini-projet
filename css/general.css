@@ -2,7 +2,7 @@ body{
     overflow-x: hidden;
 }
 
-main *:not(div.carrousel){
+main>*:where(:not(div.carrousel) :not(ul)){
     padding:0px 10px;
 }
 
@@ -22,7 +22,23 @@ main *:not(div.carrousel){
     color:blue;
 }
 
+.color-green{
+    color:green;
+}
+
+.color-gray{
+    color:gray;
+}
+
+.color-cyan{
+    color:cyan
+}
+
+.color-orange{
+    color:orange;
+}
+
 pre{
     max-width: 100%;
-    overflow: scroll;
+    overflow-x: auto;
 }

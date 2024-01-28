@@ -161,7 +161,7 @@ p#retour{
     opacity: 1;
 }
 
-main div:not(.zoom){
+main div:where(:not(.zoom) :not(body.animation main div)){
     background-color: rgba(1, 84, 174, 0.87);
     margin: 0 50px 0 50px;
     color: white;
@@ -254,10 +254,30 @@ div.deuxieme {
 }
 
 @media only screen and (max-width: 720px) {
-section{
+    section{
 
-    width: 400px;
-    height: 300px;
-}
+        width: 400px;
+        height: 300px;
+    }
 }
 
+main h3{
+    background-color: white;
+    color: black;
+    border-radius: 20px;
+    display: flex;
+    width: 300px;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+pre{
+    background-color: rgba(1, 84, 174, 0.45);
+}
+
+div.dots{
+    background-color: rgba(1, 84, 174, 0.45);
+}

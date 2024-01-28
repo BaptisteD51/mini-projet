@@ -24,13 +24,13 @@ $titre = "Liens utiles"
         <input type="hidden" value="<?= $css; ?>" name="css">
 
         <?php if (isset($_SESSION["addedLink"])) {
-            echo '<span class=\'addedLink\'>';
+            echo '<span class=\'addedLink color-green\'>';
             echo $_SESSION["addedLink"];
             echo '</span>';
         } ?>
 
         <?php if (isset($_SESSION["badLink"])) {
-            echo '<span class=\'badLink\'>';
+            echo '<span class=\'badLink color-red\'>';
             echo $_SESSION["badLink"];
             echo '</span>';
         } ?>

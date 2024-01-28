@@ -38,6 +38,10 @@ main>*:where(:not(div.carrousel) :not(ul)){
     color:orange;
 }
 
+.underline{
+    text-decoration: underline;
+}
+
 pre{
     max-width: 100%;
     overflow-x: auto;

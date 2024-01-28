@@ -90,6 +90,7 @@ pre{
     display: inline-block;
     background-color: white;
     padding-right: 25px;
+    margin-left:10px;
 }
 
 .fondBat{
@@ -144,4 +145,19 @@ div.bauhauskesako, div.psychekesako{
 h3{
     background-color: #c42f26;
     color: white;
+}
+
+body.transformation main a:not(.batiment){
+    background-color: #C43026;
+    color: white;
+    padding: 5px;
+    text-decoration: none;
+}
+
+div.dots{
+    background-color: aliceblue;
+}
+
+p.site-title{
+    padding-right: 10px;
 }

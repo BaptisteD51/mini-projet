@@ -78,3 +78,12 @@ main .zoom:hover{
     transition-duration: 2s;
     
 }
+
+main .batiment, main .batiment2{
+    text-align: center;
+    display: block;
+    background-size: cover;
+    height: 210px;
+    width: 185px;
+    background-color: unset;
+}

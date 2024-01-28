@@ -1,9 +1,12 @@
+main *:not(h1){
+    text-align:left;
+}
+
 div.dots{
     margin:auto;
     height:100px;
     width:250px;
     border:solid 1px;
-    background-color: aliceblue;
     display:flex;
     justify-content:center;
     align-items: center;
@@ -58,7 +61,7 @@ div.dots > div:last-of-type{
 
 .play-animation .branche-gibbon{
     visibility: visible;
-    animation: gibbon-move 5s;
+    animation: gibbon-move 6s;
 }
 
 .branche-gibbon img{

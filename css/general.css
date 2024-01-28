@@ -2,7 +2,7 @@ body{
     overflow-x: hidden;
 }
 
-main>*:where(:not(div.carrousel) :not(ul)){
+main>*:where(:not(div.carrousel) :not(ul) :not(section)){
     padding:0px 10px;
 }
 

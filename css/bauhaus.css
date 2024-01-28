@@ -93,11 +93,10 @@ pre{
     margin-left:10px;
 }
 
-.fondBat{
+div.fondBat p:last-of-type{
     background-image: url(../Images/font-bat.svg);
     background-repeat: no-repeat;
-    background-position: right;
-    background-size: 50%; 
+    background-size:cover;
 }
 
 .batiment{
@@ -113,7 +112,6 @@ div.fondBat,
 div.deuxieme {
     border: 1px solid black;
     background-color: rgba(0, 0, 0, 0.37);
-    margin: 0 50px 0 50px;
     color: white;
     padding: 10px;
 }

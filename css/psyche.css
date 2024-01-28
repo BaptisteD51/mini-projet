@@ -127,11 +127,10 @@ div.site-info{
 
 }
 
-.fondBat{
+.fondBat p:last-of-type {
     background-image: url(../Images/coquellicots.png);
     background-repeat: no-repeat;
-    background-position: right;
-    background-size: 50%; 
+    background-size:cover;
 }
 
 
@@ -144,7 +143,7 @@ p#retour{
 }
 
 
-#transformation:target + p{
+#transformation:target + p a{
     
     transform: translate(500px) rotate(20deg);
     transform-origin: 0 -350px;
@@ -153,7 +152,7 @@ p#retour{
     opacity: 0;
 }
 
-#retour:target + div p + p + p{
+#retour:target + div p + p + p a{
     transform: translate(0px) rotate(0deg);
     transform-origin: 0 -350px;
     transition-property: transform;
@@ -161,7 +160,7 @@ p#retour{
     opacity: 1;
 }
 
-main div:where(:not(.zoom) :not(body.animation main div)){
+main div:where(:not(body.animation main div)){
     background-color: rgba(1, 84, 174, 0.87);
     margin: 0 50px 0 50px;
     color: white;
@@ -178,6 +177,9 @@ div.zoom{
     width: 100%;
     transition-property: transform;
     transition-duration: 2s;
+    padding:0px!important;
+    margin:0px!important;
+    border-radius: 0px!important;
 }
 
 .zoom:hover{
@@ -214,10 +216,7 @@ div.deuxieme{
 
 section{
     display: flex;
-    margin: auto;
-    overflow: hidden;
-    width: 287px;
-    height: 175px;
+    margin-top:50px!important;
 }
 
 

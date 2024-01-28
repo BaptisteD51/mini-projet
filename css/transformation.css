@@ -6,7 +6,7 @@ main #retour{
     display: none;
 }
 
-main #transformation:target + p{
+main #transformation:target + p a{
     
     transform: translate(500px) rotate(20deg);
     transform-origin: 0 -350px;
@@ -15,7 +15,7 @@ main #transformation:target + p{
     opacity: 0;
 }
 
-main #retour:target + div p + p + p{
+main #retour:target + div p + p + p a{
     transform: translate(0px) rotate(0deg);
     transform-origin: 0 -350px;
     transition-property: transform;
@@ -24,10 +24,13 @@ main #retour:target + div p + p + p{
 }
 
 main div.fondBat, div.deuxieme{
-    display: grid;
-    grid-template-rows: auto ;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
     column-gap: 10px;
+}
+
+div.fondBat>*{
+    flex:1 45%;
 }
 
 main .premier{
@@ -36,11 +39,6 @@ main .premier{
 
 main .deuxieme{
     border-left: solid black;
-}
-
-main div.deuxieme{
-    margin: 50px;
-    height: 250px;
 }
 
 main p img{
@@ -68,8 +66,9 @@ main .test2{
 main section{
     margin: auto;
     overflow: hidden;
-    width: 696px;
+    width: 550px;
     height: 340px;
+    max-width:100%;
 }
 
 main .zoom:hover{
@@ -86,4 +85,8 @@ main .batiment, main .batiment2{
     height: 210px;
     width: 185px;
     background-color: unset;
+}
+
+div.deuxieme>p{
+    flex:1 45%;
 }

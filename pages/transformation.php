@@ -18,7 +18,7 @@ $pageScript = "transformation.js";
         il va se déplacer."
     </p>
     <p id="transformation"></p>
-    <p ><a class="batiment" href="#transformation"></a></p>
+    <p><a class="batiment" href="#transformation"></a></p>
 </div>
 
 
